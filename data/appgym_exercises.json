@@ -1,0 +1,731 @@
+{
+  "versao": "1.0.0",
+  "escopo": "beta_v1",
+  "grupos": [
+    "BICEPS",
+    "TRICEPS"
+  ],
+  "total": 20,
+  "totalBiceps": 10,
+  "totalTriceps": 10,
+  "exercicios": [
+    {
+      "id": "974",
+      "slug": "biceps-curl-with-dumbbell",
+      "nome": "Rosca com Haltere",
+      "descricao": "Exercício básico e eficaz para isolamento do bíceps com halteres.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [
+        "antebraco"
+      ],
+      "tipo": "isolation",
+      "equipamento": [
+        "haltere"
+      ],
+      "frames": [
+        "_images/web/biceps-curl-with-dumbbell-1.png",
+        "_images/web/biceps-curl-with-dumbbell-2.png"
+      ],
+      "steps": [
+        "Stand with our feet shoulder width apart, your knees slightly bent and your abs drawn in.",
+        "Grasp a dumbbell in each hand with your palms facing up.",
+        "Extend your arms so they are at the sides of your body.",
+        "Keeping your elbows, locked lift your arms to your chest so that your forearms touch your biceps.",
+        "In a slow controlled manner, lower your arms to the starting position.",
+        "Note: Do not swing your body as you perform this exercise."
+      ],
+      "cuidados": [
+        "Mantenha os cotovelos fixos ao lado do corpo",
+        "Não balance o tronco durante o movimento",
+        "Controle a descida do peso de forma lenta"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.88,
+      "escoreRiscoLesao": 0.1,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "961",
+      "slug": "biceps-curls-with-barbell",
+      "nome": "Rosca Direta com Barra",
+      "descricao": "Exercício básico para o bíceps utilizando barra reta.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [
+        "ombros",
+        "antebraco"
+      ],
+      "tipo": "isolation",
+      "equipamento": [
+        "barra"
+      ],
+      "frames": [
+        "_images/web/biceps-curls-with-barbell-1.png",
+        "_images/web/biceps-curls-with-barbell-2.png"
+      ],
+      "steps": [
+        "This is a basic exercise for the biceps (arms).",
+        "Stand with your feet shoulder width apart, your knees slightly bent and your abs drawn in.",
+        "Grasp a barbell with palms facing up, approximately shoulder width apart.",
+        "Lower your arms fully to above your thighs and bending only your elbows, raise the bar to your upper chest.",
+        "Pause for a moment and then return to the starting position.",
+        "Note: Do not swing your hips or back during this exercise."
+      ],
+      "cuidados": [
+        "Não balance o tronco durante o movimento",
+        "Mantenha os cotovelos fixos ao lado do corpo",
+        "Evite hiperextender os pulsos"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.9,
+      "escoreRiscoLesao": 0.2,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "976",
+      "slug": "ez-bar-curl-with-barbell",
+      "nome": "Rosca com Barra W",
+      "descricao": "Rosca com barra W, que reduz o estresse nos pulsos em relação à barra reta.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [
+        "antebraco"
+      ],
+      "tipo": "isolation",
+      "equipamento": [
+        "barra"
+      ],
+      "frames": [
+        "_images/web/ez-bar-curl-with-barbell-1.png",
+        "_images/web/ez-bar-curl-with-barbell-2.png"
+      ],
+      "steps": [
+        "Stand with your feet shoulder width apart and your knees slightly bent.",
+        "Grasp the barbell with palms up.",
+        "Lower the bar so it is against your thighs.",
+        "Keeping your elbows still, raise the bar up to your chest so that your forearms touch your biceps.",
+        "Note: Lean up against a wall or post to keep yourself from swaying."
+      ],
+      "cuidados": [
+        "Mantenha os cotovelos fixos ao lado do corpo",
+        "Não balance o tronco",
+        "A barra W reduz estresse no pulso — mantenha a pegada natural"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.89,
+      "escoreRiscoLesao": 0.15,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "970",
+      "slug": "concentration-curls-with-dumbbell",
+      "nome": "Rosca Concentrada com Haltere",
+      "descricao": "Exercício de isolamento máximo do bíceps realizado sentado com apoio do cotovelo na coxa.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [
+        "antebraco"
+      ],
+      "tipo": "isolation",
+      "equipamento": [
+        "haltere"
+      ],
+      "frames": [],
+      "steps": [
+        "Sit on the end of a flat bench with your feet flat and your legs spread apart.",
+        "Grasp a dumbbell in your hand, palms facing up.",
+        "With your elbow pressed against your inner thigh, curl the dumbbell up towards your chest.",
+        "Slowly return to the starting position.",
+        "Repeat and switch arms.",
+        "Note: Keep all of your body still except the arm you are exercising."
+      ],
+      "cuidados": [
+        "Apoie o cotovelo firmemente na parte interna da coxa",
+        "Realize o movimento de forma lenta e controlada",
+        "Não torça o pulso durante o movimento"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.95,
+      "escoreRiscoLesao": 0.1,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "966",
+      "slug": "hammer-curls-with-rope-and-cable",
+      "nome": "Rosca Martelo no Cabo com Corda",
+      "descricao": "Variação da rosca martelo no cabo com corda, trabalhando bíceps e braquiorradial.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [],
+      "tipo": "isolation",
+      "equipamento": [
+        "cabo"
+      ],
+      "frames": [
+        "_images/web/hammer-curls-with-rope-and-cable-1.png",
+        "_images/web/hammer-curls-with-rope-and-cable-2.png"
+      ],
+      "steps": [
+        "Using the rope with the cable machine allows you isolate the biceps with this version of the Hammer Curl. This is a good exercise for beginners.",
+        "Attach a rope to a cable pulley to the bottom of the weight stack. Stand with your feet shoulder width apart, your knees slightly bent and your abs drawn in. Grasp the rope with a close underhand grip (palms facing up). Lower your arms fully to above your thighs and bending only your elbows, raise the rope to your upper chest. Pause for a moment and then return to the starting position.",
+        "Note: Keep your elbows at your side throughout this exercise. Do not swing your hips or back during this exercise."
+      ],
+      "cuidados": [
+        "Mantenha o polegar apontado para cima durante o movimento",
+        "Não balance o tronco",
+        "Controle a tensão do cabo no retorno"
+      ],
+      "vetorForca": "angular",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.83,
+      "escoreRiscoLesao": 0.1,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "989",
+      "slug": "preacher-curl-with-barbell",
+      "nome": "Rosca Scott com Barra",
+      "descricao": "Rosca Scott com barra que isola o bíceps eliminando o uso do tronco.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [
+        "antebraco"
+      ],
+      "tipo": "isolation",
+      "equipamento": [
+        "barra"
+      ],
+      "frames": [
+        "_images/web/preacher-curl-with-barbell-1.png",
+        "_images/web/preacher-curl-with-barbell-2.png"
+      ],
+      "steps": [
+        "&nbsp;",
+        "Adjust the seat of the bench so that your arms are level with the top of the bench.",
+        "Grasp the bar with palms facing up, shoulder width apart.",
+        "Picking up the bar, rest your arms against the bench and extend them fully.",
+        "Keeping your arms on the bench at all times, curl the bar up towards your head.",
+        "Pause for a moment and then lower the bar back to starting position.",
+        "Note: Perform this exercise in a slow controlled manner for best results."
+      ],
+      "cuidados": [
+        "Não estenda totalmente o cotovelo para evitar lesão",
+        "Mantenha o braço apoiado no suporte o tempo todo",
+        "Use cargas moderadas — o isolamento aumenta o risco"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.92,
+      "escoreRiscoLesao": 0.25,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "981",
+      "slug": "incline-inner-biceps-curl-with-dumbbell-2",
+      "nome": "Rosca Inclinada com Haltere",
+      "descricao": "Rosca realizada no banco inclinado que aumenta o alongamento do bíceps.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [],
+      "tipo": "isolation",
+      "equipamento": [
+        "haltere"
+      ],
+      "frames": [],
+      "steps": [
+        "This exercise uses an incline bench and twist to more to change your body’s position as you perform Biceps Curls. The movement is very similar to a Preacher Curl.",
+        " Adjust an incline bench to a 45 degree angle.",
+        "Grasp dumbbells in each hand with and sit down with your back against the bench, with your feet resting on the floor for support.",
+        "Allow your arms to hang down at your sides, your palms facing your body.",
+        "Keeping your elbow straight, raise the dumbbells up towards your head, contracting your biceps.",
+        "In a controlled manner lower the weight and repeat.",
+        "Note: Practice steady movements in this exercise, be careful not to let your arms sway."
+      ],
+      "cuidados": [
+        "Mantenha as costas totalmente apoiadas no banco inclinado",
+        "Não force a amplitude além do confortável",
+        "Realize o movimento de forma lenta e controlada"
+      ],
+      "vetorForca": "angular",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.91,
+      "escoreRiscoLesao": 0.2,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "962",
+      "slug": "standing-biceps-curl-with-cable",
+      "nome": "Rosca no Cabo em Pé",
+      "descricao": "Rosca no cabo em pé que mantém tensão constante no bíceps durante todo o movimento.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [
+        "antebraco",
+        "ombros"
+      ],
+      "tipo": "isolation",
+      "equipamento": [
+        "cabo"
+      ],
+      "frames": [
+        "_images/web/standing-biceps-curl-with-cable-1.png",
+        "_images/web/standing-biceps-curl-with-cable-2.png"
+      ],
+      "steps": [
+        "Attach a short bar to a cable pulley to the bottom of the weight stack.",
+        "Stand with your feet shoulder width apart, your knees slightly bent and your abs drawn in.",
+        "Grasp the bar with palms facing up, and hands fairly close together.",
+        "Lower your arms fully to above your thighs and bending only your elbows, raise the bar to your upper chest.",
+        "Pause for a moment and then return to the starting position.",
+        "Note: Do not swing your hips or back during this exercise."
+      ],
+      "cuidados": [
+        "Mantenha os cotovelos fixos ao lado do corpo",
+        "Não use impulso do tronco",
+        "Aproveite a tensão constante do cabo — faça o movimento devagar"
+      ],
+      "vetorForca": "angular",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.87,
+      "escoreRiscoLesao": 0.15,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "993",
+      "slug": "seated-biceps-curl-with-dumbbell",
+      "nome": "Rosca com Haltere Sentado",
+      "descricao": "Versão sentada da rosca com haltere, que reduz o uso do tronco como compensação.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [
+        "antebraco"
+      ],
+      "tipo": "isolation",
+      "equipamento": [
+        "haltere"
+      ],
+      "frames": [
+        "_images/web/seated-biceps-curl-with-dumbbell-1.png",
+        "_images/web/seated-biceps-curl-with-dumbbell-2.png"
+      ],
+      "steps": [
+        "Sit on bench with your feet firmly on the floor and your back straight.",
+        "Grasp a dumbbell in each hand with your palms facing each other.",
+        "Lower the dumbbells to your sides and slowly curl your arms up so your palms are facing up.",
+        "Squeeze your biceps at the top and slowly lower to the starting position.",
+        "Note: If possible use a short backed bench to help your posture."
+      ],
+      "cuidados": [
+        "Mantenha as costas apoiadas no banco",
+        "Não balance o tronco para frente",
+        "Mantenha os cotovelos fixos durante o movimento"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.87,
+      "escoreRiscoLesao": 0.1,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "973",
+      "slug": "alternating-biceps-curl-with-dumbbell",
+      "nome": "Rosca Alternada com Haltere",
+      "descricao": "Rosca com halteres alternando os braços, permitindo maior foco em cada lado.",
+      "musculoPrimario": "BICEPS",
+      "musculoSecundario": [
+        "antebraco"
+      ],
+      "tipo": "isolation",
+      "equipamento": [
+        "haltere"
+      ],
+      "frames": [
+        "_images/web/alternating-biceps-curl-with-dumbbell-1.png",
+        "_images/web/alternating-biceps-curl-with-dumbbell-2.png"
+      ],
+      "steps": [
+        "Steps",
+        "Stand with your feet shoulder width apart, your knees slightly bent and your abs drawn in.",
+        "Grasp a dumbbell in each hand so your palms are facing up.",
+        "Extend your arms so they are at the sides of your body.",
+        "Keeping your elbows locked lift your left arm to your chest so that your forearm touches your bicep.",
+        "Lower your arm and repeat with your right arm.",
+        "Note: Do not swing your body as you perform this exercise."
+      ],
+      "cuidados": [
+        "Não balance o tronco ao alternar os braços",
+        "Mantenha o cotovelo do braço que descansa fixo",
+        "Controle a descida do peso"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.86,
+      "escoreRiscoLesao": 0.1,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "954",
+      "slug": "triceps-pushdown-with-cable",
+      "nome": "Pushdown de Tríceps no Cabo",
+      "descricao": "Exercício fundamental de isolamento do tríceps utilizando cabo com barra reta.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [],
+      "tipo": "isolation",
+      "equipamento": [
+        "cabo"
+      ],
+      "frames": [
+        "_images/web/triceps-pushdown-with-cable-1.png",
+        "_images/web/triceps-pushdown-with-cable-2.png"
+      ],
+      "steps": [
+        "Stand in front of a cable machine and attach a short bar to a high pulley.",
+        "Grasp the handle with your palms facing down.",
+        "Draw your abs in and keep your back straight.",
+        "Keeping your elbows at your side push the handle down towards your thighs.",
+        "Pause for a moment and then return to the starting position.",
+        "Note: You may want to stager one foot in front of the other for a better stance."
+      ],
+      "cuidados": [
+        "Mantenha os cotovelos fixos e colados ao lado do corpo",
+        "Não incline o tronco para frente para usar mais carga",
+        "Controle o retorno do cabo — não deixe subir de forma descontrolada"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.88,
+      "escoreRiscoLesao": 0.15,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "952",
+      "slug": "tate-press-with-dumbbell",
+      "nome": "Tate Press com Haltere",
+      "descricao": "Exercício avançado de tríceps realizado deitado que trabalha o músculo de forma diferente.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [],
+      "tipo": "isolation",
+      "equipamento": [
+        "haltere"
+      ],
+      "frames": [],
+      "steps": [
+        "Lay flat on a bench with your head at one end and your feet firmly planted on the floor.",
+        "Hold a dumbbell in each hand so your palms are facing your feet.",
+        "Drawing your abs in and keeping your back on the bench, raise the weights to the center of your chest.",
+        "Without moving elbows, slowly raise your arms up and out contracting your triceps."
+      ],
+      "cuidados": [
+        "Exercício avançado — não recomendado para iniciantes",
+        "Mantenha os cotovelos apontados para cima durante todo o movimento",
+        "Use cargas leves inicialmente para aprender a técnica"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.85,
+      "escoreRiscoLesao": 0.3,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "920",
+      "slug": "tricep-dips-using-body-weight",
+      "nome": "Mergulho de Tríceps no Peso Corporal",
+      "descricao": "Exercício com peso corporal que trabalha fortemente o tríceps usando barras paralelas ou banco.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [
+        "ombros",
+        "peito"
+      ],
+      "tipo": "compound",
+      "equipamento": [
+        "body"
+      ],
+      "frames": [
+        "_images/web/tricep-dips-using-body-weight-1.png",
+        "_images/web/tricep-dips-using-body-weight-2.png"
+      ],
+      "steps": [
+        "Grasp a set of parallel bars and push yourself up to the starting position.",
+        "Keeping your elbows close to your body, lower yourself down until your triceps are parallel to the floor.",
+        "Slowly raise yourself back to the starting position.",
+        "Note: Keep your abs drawn in and your body straight during this exercise."
+      ],
+      "cuidados": [
+        "Não desça além de 90 graus no cotovelo",
+        "Mantenha o tronco levemente inclinado à frente",
+        "Evite este exercício se tiver problemas no ombro"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.86,
+      "escoreRiscoLesao": 0.25,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "941",
+      "slug": "seated-two-arm-triceps-extension-with-dumbbell",
+      "nome": "Extensão de Tríceps Acima da Cabeça Sentado",
+      "descricao": "Extensão de tríceps com haltere acima da cabeça sentado, focando na cabeça longa do tríceps.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [],
+      "tipo": "isolation",
+      "equipamento": [
+        "haltere"
+      ],
+      "frames": [],
+      "steps": [
+        "Sit on the edge of a bench with your feet flat on the floor.",
+        "Hold a dumbbell in each hand.",
+        "Bring your arms up to your side so the dumbbell is almost parallel to your chest, keeping your lower arm vertical.",
+        "Press your arm back in arc towards your back.",
+        "Return to the starting position repeat and switch arms."
+      ],
+      "cuidados": [
+        "Mantenha os cotovelos apontados para cima e próximos à cabeça",
+        "Não arqueie excessivamente a lombar",
+        "Controle o peso na descida atrás da cabeça"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.89,
+      "escoreRiscoLesao": 0.25,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "953",
+      "slug": "triceps-kickback-with-dumbbell",
+      "nome": "Tríceps Coice com Haltere",
+      "descricao": "Exercício de isolamento do tríceps realizado curvado para frente com haltere.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [],
+      "tipo": "isolation",
+      "equipamento": [
+        "haltere"
+      ],
+      "frames": [],
+      "steps": [
+        "Standing along side a flat bench, bend your left knee and place it on the bench.",
+        "Place your left hand on the bench for support, keeping your back at a 45 degree angle.",
+        "Hold a dumbbell in your right hand and place your right foot on the floor.",
+        "Bend your right arm and raise it up to your shoulder, then with controlled motion kick it back, fully extending your arm.",
+        "Switch arms and repeat.",
+        "Note: Keep your elbow close to your body during this exercise."
+      ],
+      "cuidados": [
+        "Mantenha o cotovelo fixo e paralelo ao tronco",
+        "Não balance o tronco para dar impulso",
+        "Estenda completamente o braço no topo do movimento"
+      ],
+      "vetorForca": "horizontal",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.84,
+      "escoreRiscoLesao": 0.15,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "955",
+      "slug": "triceps-pushdown-with-rope-and-cable",
+      "nome": "Pushdown de Tríceps com Corda no Cabo",
+      "descricao": "Variação do pushdown com corda que permite abertura no final do movimento, aumentando a contração.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [],
+      "tipo": "isolation",
+      "equipamento": [
+        "cabo"
+      ],
+      "frames": [
+        "_images/web/triceps-pushdown-with-rope-and-cable-1.png",
+        "_images/web/triceps-pushdown-with-rope-and-cable-2.png"
+      ],
+      "steps": [
+        "Stand in front of a cable machine and attach a rope to a high pulley.",
+        "Grasp the rope with palms facing down.",
+        "Draw your abs in and keep your back straight.",
+        "Keeping your elbows at your side push the rope down towards your thighs, if possible “split” the rope apart at the bottom.",
+        "Pause for a moment and then return to the starting position.",
+        "Note: You may want to stager one foot in front of the other for a better stance."
+      ],
+      "cuidados": [
+        "Abra a corda para os lados no final do movimento para máxima contração",
+        "Mantenha os cotovelos fixos ao lado do corpo",
+        "Não use o tronco para aumentar a carga"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.9,
+      "escoreRiscoLesao": 0.15,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "938",
+      "slug": "reverse-grip-triceps-pushdown",
+      "nome": "Pushdown de Tríceps com Pegada Inversa",
+      "descricao": "Variação do pushdown com pegada supinada que ativa mais a cabeça medial do tríceps.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [],
+      "tipo": "isolation",
+      "equipamento": [
+        "cabo"
+      ],
+      "frames": [
+        "_images/web/reverse-grip-triceps-pushdown-1.png",
+        "_images/web/reverse-grip-triceps-pushdown-2.png"
+      ],
+      "steps": [
+        "Stand in front of a cable machine and attach a bar to a high pulley.",
+        "Grasp the handle with palms facing up.",
+        "Keeping your elbows at your side, pull the handle down towards your thighs.",
+        "Pause for a moment and then return to the starting position.",
+        "Note: You may want to stager one foot in front of the other for a better stance."
+      ],
+      "cuidados": [
+        "Mantenha os pulsos retos durante o movimento",
+        "Cotovelos fixos ao lado do corpo",
+        "Use carga menor que no pushdown tradicional"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.86,
+      "escoreRiscoLesao": 0.15,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "915",
+      "slug": "standing-triceps-extension",
+      "nome": "Extensão de Tríceps em Pé",
+      "descricao": "Extensão de tríceps realizada em pé com barra ou haltere acima da cabeça.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [],
+      "tipo": "isolation",
+      "equipamento": [
+        "haltere"
+      ],
+      "frames": [
+        "_images/web/standing-triceps-extension-1.png",
+        "_images/web/standing-triceps-extension-2.png"
+      ],
+      "steps": [
+        "Stand with your feet shoulder width apart, your back straight and your abs drawn in.",
+        "Hold a dumbbell in both hands, with your palms facing up.",
+        "Raise the dumbbell over your head and slowly lower the dumbbell in an arc behind your head.",
+        "Slowly raise the dumbbell back up to the starting position.",
+        "Note:Keep your elbows close to your head during the exercise."
+      ],
+      "cuidados": [
+        "Mantenha os cotovelos apontados para cima próximos à cabeça",
+        "Não arqueie a lombar — contraia o core",
+        "Controle a descida do peso atrás da cabeça"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.87,
+      "escoreRiscoLesao": 0.2,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "916",
+      "slug": "decline-close-grip-bench-to-skull-crusher",
+      "nome": "Supino Fechado Declinado com Skull Crusher",
+      "descricao": "Exercício combinado que une o supino fechado com a extensão de crânio no banco declinado.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [
+        "peito"
+      ],
+      "tipo": "isolation",
+      "equipamento": [
+        "barra"
+      ],
+      "frames": [
+        "_images/web/decline-close-grip-bench-to-skull-crusher-1.png",
+        "_images/web/decline-close-grip-bench-to-skull-crusher-2.png"
+      ],
+      "steps": [
+        "Lay with your back on a flat bench.",
+        "Grip a barbell with a close grip 8-12 inches apart.",
+        "Keeping your arms close to your sides lower the bar so it touches your chest, approximately an inch below your nipples.",
+        "Slowly return to starting position, concentrating on your triceps.",
+        "At the top of the exercise bend your arms down towards your head.",
+        "Raise the bar back up over your chest and repeat."
+      ],
+      "cuidados": [
+        "Exercício avançado — requer supervisão",
+        "Mantenha controle total da barra em todo momento",
+        "Não realize sem um parceiro de treino para segurança"
+      ],
+      "vetorForca": "angular",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.91,
+      "escoreRiscoLesao": 0.4,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    },
+    {
+      "id": "919",
+      "slug": "tricep-dips",
+      "nome": "Mergulho de Tríceps na Máquina",
+      "descricao": "Versão do mergulho de tríceps na máquina, mais segura e controlada que a versão livre.",
+      "musculoPrimario": "TRICEPS",
+      "musculoSecundario": [
+        "ombros"
+      ],
+      "tipo": "compound",
+      "equipamento": [
+        "maquina"
+      ],
+      "frames": [
+        "_images/web/tricep-dips-1.png",
+        "_images/web/tricep-dips-2.png"
+      ],
+      "steps": [
+        "Adjust the seat of the machine so that the handles are equal with your elbows.",
+        "Grasping the handles, press down with equal pressure until your arms are fully extended.",
+        "Pause, and then return to the starting position."
+      ],
+      "cuidados": [
+        "Ajuste o banco para a altura adequada antes de começar",
+        "Mantenha as costas apoiadas no suporte",
+        "Não deixe os ombros subirem durante o movimento"
+      ],
+      "vetorForca": "vertical",
+      "planoMovimento": "sagital",
+      "ativacaoMuscular": 0.84,
+      "escoreRiscoLesao": 0.15,
+      "validadoProfissional": false,
+      "fonte": "everkinetic",
+      "versao": "1.0.0"
+    }
+  ]
+}
