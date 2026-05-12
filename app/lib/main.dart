@@ -1,66 +1,74 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'AppGym',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const TesteFirebase(),
     );
   }
 }
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+
+class TesteFirebase extends StatefulWidget {
+  const TesteFirebase({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<TesteFirebase> createState() => _TesteFirebaseState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _TesteFirebaseState extends State<TesteFirebase> {
+  List<String> exercicios = [];
+  bool carregando = true;
 
-  void _incrementCounter() {
+  @override
+  void initState() {
+    super.initState();
+    carregarExercicios();
+  }
+
+  Future<void> carregarExercicios() async {
+    final snapshot = await FirebaseFirestore.instance
+        .collection('exercicios')
+        .limit(5)
+        .get();
+
     setState(() {
-      _counter++;
+      exercicios = snapshot.docs.map((doc) => doc['nome'] as String).toList();
+      carregando = false;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
-        title: Text(widget.title),
-      ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: .center,
-          children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+      appBar: AppBar(title: const Text('AppGym — Teste Firebase')),
+      body: carregando
+          ? const Center(child: CircularProgressIndicator())
+          : ListView.builder(
+              itemCount: exercicios.length,
+              itemBuilder: (context, index) => ListTile(
+                leading: const Icon(Icons.fitness_center),
+                title: Text(exercicios[index]),
+              ),
             ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }

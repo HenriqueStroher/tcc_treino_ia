@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "976666084314",
+    "project_id": "appgym-7f699",
+    "storage_bucket": "appgym-7f699.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976666084314:android:3637d83375f61c2eca36e3",
+        "android_client_info": {
+          "package_name": "com.appgym.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5RCRnDljtmplYj_VQVqekUggnraeb3Bc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976666084314:android:a5072d27a965df29ca36e3",
+        "android_client_info": {
+          "package_name": "com.example.tcc_treino_ia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5RCRnDljtmplYj_VQVqekUggnraeb3Bc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
