@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/exercicio.dart';
+import 'sugestoes_screen.dart';
 
 class DetalheExercicioScreen extends StatefulWidget {
   final Exercicio exercicio;
@@ -109,8 +110,11 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
               width: double.infinity,
               child: ElevatedButton.icon(
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Em breve: sugestões via IA!')),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => SugestoesScreen(exercicioOrigem: ex),
+                    ),
                   );
                 },
                 icon: const Icon(Icons.auto_awesome),
