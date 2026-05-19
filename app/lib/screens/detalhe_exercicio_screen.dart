@@ -44,6 +44,11 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
     return 'assets/images/$slug-${index + 1}.png';
   }
 
+  String _capitalizar(String texto) {
+    if (texto.isEmpty) return texto;
+    return texto[0].toUpperCase() + texto.substring(1);
+  }
+
   @override
   Widget build(BuildContext context) {
     final ex = widget.exercicio;
@@ -84,28 +89,22 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
             ),
             const SizedBox(height: 20),
 
-            // Descrição
             _secao('Sobre o exercício', ex.descricao),
             const SizedBox(height: 16),
 
-            // Músculo alvo
             _chip('Músculo alvo', ex.musculoPrimario == 'BICEPS' ? 'Bíceps' : 'Tríceps',
                 Colors.deepPurple),
             const SizedBox(height: 16),
 
-            // Equipamento
-            _secaoLista('Equipamento', ex.equipamento),
+            _secaoListaCapitalizada('Equipamento', ex.equipamento),
             const SizedBox(height: 16),
 
-            // Passos de execução
             _secaoLista('Como executar', ex.steps),
             const SizedBox(height: 16),
 
-            // Cuidados
             _secaoListaIcone('⚠️ Cuidados', ex.cuidados, Colors.orange),
             const SizedBox(height: 24),
 
-            // Botão Sugerir Variação
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -158,6 +157,32 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
           decoration: BoxDecoration(color: cor, borderRadius: BorderRadius.circular(20)),
           child: Text(valor, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         ),
+      ],
+    );
+  }
+
+  Widget _secaoListaCapitalizada(String titulo, List<String> itens) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(titulo,
+            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
+        const SizedBox(height: 8),
+        ...itens.map((item) => Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('• ', style: TextStyle(color: Colors.deepPurple, fontSize: 16)),
+                  Expanded(
+                    child: Text(
+                      _capitalizar(item),
+                      style: const TextStyle(color: Colors.white70, height: 1.4),
+                    ),
+                  ),
+                ],
+              ),
+            )),
       ],
     );
   }

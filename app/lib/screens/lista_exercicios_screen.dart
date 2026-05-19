@@ -134,15 +134,15 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
       padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
       child: Row(
         children: [
-          _botaoGrupo('BICEPS', 'Bíceps', Icons.sports_gymnastics),
+          _botaoGrupo('BICEPS', 'Bíceps'),
           const SizedBox(width: 10),
-          _botaoGrupo('TRICEPS', 'Tríceps', Icons.fitness_center),
+          _botaoGrupo('TRICEPS', 'Tríceps'),
         ],
       ),
     );
   }
 
-  Widget _botaoGrupo(String grupo, String label, IconData icon) {
+  Widget _botaoGrupo(String grupo, String label) {
     final selecionado = _grupoSelecionado == grupo;
     return Expanded(
       child: GestureDetector(
@@ -170,20 +170,14 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
                   ]
                 : null,
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(icon, color: selecionado ? Colors.white : Colors.white38, size: 16),
-              const SizedBox(width: 6),
-              Text(
-                label,
-                style: TextStyle(
-                  color: selecionado ? Colors.white : Colors.white54,
-                  fontWeight: selecionado ? FontWeight.w700 : FontWeight.w500,
-                  fontSize: 14,
-                ),
-              ),
-            ],
+          child: Text(
+            label,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: selecionado ? Colors.white : Colors.white54,
+              fontWeight: selecionado ? FontWeight.w700 : FontWeight.w500,
+              fontSize: 14,
+            ),
           ),
         ),
       ),
