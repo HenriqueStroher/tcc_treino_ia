@@ -67,7 +67,7 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
                 width: double.infinity,
                 height: 220,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF16213E),
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: ClipRRect(
@@ -105,10 +105,10 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
             _secaoListaIcone('⚠️ Cuidados', ex.cuidados, Colors.orange),
             const SizedBox(height: 24),
 
-            // Botão IA
+            // Botão Sugerir Variação
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton.icon(
+              child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -117,13 +117,15 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
                     ),
                   );
                 },
-                icon: const Icon(Icons.auto_awesome),
-                label: const Text('IA — Sugerir Variação'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.deepPurple,
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 14),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                ),
+                child: const Text(
+                  'Sugerir Variação',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                 ),
               ),
             ),

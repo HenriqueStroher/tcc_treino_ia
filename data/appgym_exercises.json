@@ -136,7 +136,10 @@
       "equipamento": [
         "haltere"
       ],
-      "frames": [],
+      "frames": [
+        "_images/web/concentration-curls-with-dumbbell-1.png",
+        "_images/web/concentration-curls-with-dumbbell-2.png"
+      ],
       "steps": [
         "Sit on the end of a flat bench with your feet flat and your legs spread apart.",
         "Grasp a dumbbell in your hand, palms facing up.",
@@ -241,7 +244,10 @@
       "equipamento": [
         "haltere"
       ],
-      "frames": [],
+      "frames": [
+        "_images/web/incline-inner-biceps-curl-with-dumbbell-2-1.png",
+        "_images/web/incline-inner-biceps-curl-with-dumbbell-2-2.png"
+      ],
       "steps": [
         "This exercise uses an incline bench and twist to more to change your body’s position as you perform Biceps Curls. The movement is very similar to a Preacher Curl.",
         " Adjust an incline bench to a 45 degree angle.",
@@ -426,7 +432,10 @@
       "equipamento": [
         "haltere"
       ],
-      "frames": [],
+      "frames": [
+        "_images/web/tate-press-with-dumbbell-1.png",
+        "_images/web/tate-press-with-dumbbell-2.png"
+      ],
       "steps": [
         "Lay flat on a bench with your head at one end and your feet firmly planted on the floor.",
         "Hold a dumbbell in each hand so your palms are facing your feet.",
@@ -494,7 +503,10 @@
       "equipamento": [
         "haltere"
       ],
-      "frames": [],
+      "frames": [
+        "_images/web/seated-two-arm-triceps-extension-with-dumbbell-1.png",
+        "_images/web/seated-two-arm-triceps-extension-with-dumbbell-2.png"
+      ],
       "steps": [
         "Sit on the edge of a bench with your feet flat on the floor.",
         "Hold a dumbbell in each hand.",
@@ -526,7 +538,10 @@
       "equipamento": [
         "haltere"
       ],
-      "frames": [],
+      "frames": [
+        "_images/web/triceps-kickback-with-dumbbell-1.png",
+        "_images/web/triceps-kickback-with-dumbbell-2.png"
+      ],
       "steps": [
         "Standing along side a flat bench, bend your left knee and place it on the bench.",
         "Place your left hand on the bench for support, keeping your back at a 45 degree angle.",
