@@ -7,10 +7,10 @@ class ListaExerciciosScreen extends StatefulWidget {
   const ListaExerciciosScreen({super.key});
 
   @override
-  State<ListaExerciciosScreen> createState() => _ListaExerciciosScreenState();
+  ListaExerciciosScreenState createState() => ListaExerciciosScreenState();
 }
 
-class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
+class ListaExerciciosScreenState extends State<ListaExerciciosScreen>
     with SingleTickerProviderStateMixin {
   final ExercicioService _service = ExercicioService();
   final TextEditingController _buscaController = TextEditingController();
@@ -21,9 +21,8 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
   String _grupoSelecionado = 'BICEPS';
   bool _carregando = true;
 
-  static const _bgPrimary  = Color(0xFF111111);
-  static const _bgCard     = Color(0xFF1C1C1C);
-  static const _bgCardAlt  = Color(0xFF222222);
+  static const _bgPrimary = Color(0xFF111111);
+  static const _bgCard    = Color(0xFF1C1C1C);
 
   @override
   void initState() {
@@ -42,6 +41,14 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
     super.dispose();
   }
 
+  // Público para ser chamado pelo MainScreen
+  void mudarGrupo(String grupo) {
+    if (_grupoSelecionado == grupo) return;
+    setState(() => _grupoSelecionado = grupo);
+    _buscaController.clear();
+    _carregarExercicios();
+  }
+
   Future<void> _carregarExercicios() async {
     setState(() => _carregando = true);
     final lista = await _service.buscarPorGrupo(_grupoSelecionado);
@@ -58,13 +65,6 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
           .where((ex) => ex.nome.toLowerCase().contains(texto.toLowerCase()))
           .toList();
     });
-  }
-
-  void _mudarGrupo(String grupo) {
-    if (_grupoSelecionado == grupo) return;
-    setState(() => _grupoSelecionado = grupo);
-    _buscaController.clear();
-    _carregarExercicios();
   }
 
   @override
@@ -99,7 +99,7 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
     final selecionado = _grupoSelecionado == grupo;
     return Expanded(
       child: GestureDetector(
-        onTap: () => _mudarGrupo(grupo),
+        onTap: () => mudarGrupo(grupo),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(vertical: 10),
@@ -156,13 +156,13 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
     }
 
     if (_exerciciosFiltrados.isEmpty) {
-      return Center(
+      return const Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.search_off, color: Colors.white24, size: 48),
-            const SizedBox(height: 12),
-            const Text(
+            Icon(Icons.search_off, color: Colors.white24, size: 48),
+            SizedBox(height: 12),
+            Text(
               'Nenhum exercício encontrado',
               style: TextStyle(color: Colors.white38, fontSize: 15),
             ),
@@ -199,7 +199,6 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
           padding: const EdgeInsets.all(12),
           child: Row(
             children: [
-              // Imagem
               Container(
                 width: 64,
                 height: 64,
@@ -219,7 +218,6 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
                 ),
               ),
               const SizedBox(width: 14),
-              // Nome
               Expanded(
                 child: Text(
                   ex.nome,
@@ -231,7 +229,6 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
                   ),
                 ),
               ),
-              // Seta
               Container(
                 width: 32,
                 height: 32,

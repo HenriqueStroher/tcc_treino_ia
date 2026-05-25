@@ -47,7 +47,7 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
   Color _corScore(double score) {
     if (score >= 0.90) return const Color(0xFF4ADE80); // verde
     if (score >= 0.75) return const Color(0xFFFBBF24); // amarelo
-    return const Color(0xFFEF4444); // vermelho
+    return const Color(0xFFEF4444);                    // vermelho
   }
 
   String _labelScore(double score) {
@@ -191,7 +191,6 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
           padding: const EdgeInsets.all(12),
           child: Row(
             children: [
-              // Imagem
               Container(
                 width: 64,
                 height: 64,
@@ -211,7 +210,6 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
                 ),
               ),
               const SizedBox(width: 12),
-              // Conteúdo
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final void Function(String grupo) onNavegar;
 
-  static const _bgPrimary  = Color(0xFF111111);
-  static const _bgCard     = Color(0xFF1C1C1C);
-  static const _bgCardAlt  = Color(0xFF222222);
+  const HomeScreen({super.key, required this.onNavegar});
+
+  static const _bgPrimary = Color(0xFF111111);
+  static const _bgCard    = Color(0xFF1C1C1C);
 
   @override
   Widget build(BuildContext context) {
@@ -185,24 +186,59 @@ class HomeScreen extends StatelessWidget {
         const SizedBox(height: 12),
         Row(
           children: [
-            Expanded(child: _cardRecurso(Icons.fitness_center, 'Bíceps', '10 exercícios')),
+            Expanded(child: _cardGrupo(Icons.fitness_center, 'Bíceps', '10 exercícios', 'BICEPS')),
             const SizedBox(width: 10),
-            Expanded(child: _cardRecurso(Icons.fitness_center, 'Tríceps', '10 exercícios')),
+            Expanded(child: _cardGrupo(Icons.fitness_center, 'Tríceps', '10 exercícios', 'TRICEPS')),
           ],
         ),
         const SizedBox(height: 10),
         Row(
           children: [
-            Expanded(child: _cardRecurso(Icons.menu_book_rounded, 'Conteúdo\nEducativo', 'Detalhado')),
+            Expanded(child: _cardInfo(Icons.menu_book_rounded, 'Conteúdo\nEducativo', 'Detalhado')),
             const SizedBox(width: 10),
-            Expanded(child: _cardRecurso(Icons.lightbulb_outline, 'IA de\nVariações', 'Inteligente')),
+            Expanded(child: _cardInfo(Icons.lightbulb_outline, 'IA de\nVariações', 'Inteligente')),
           ],
         ),
       ],
     );
   }
 
-  Widget _cardRecurso(IconData icone, String titulo, String subtitulo) {
+  // Card clicável para Bíceps/Tríceps
+  Widget _cardGrupo(IconData icone, String titulo, String subtitulo, String grupo) {
+    return GestureDetector(
+      onTap: () => onNavegar(grupo),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: _bgCard,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: Colors.white24),
+        ),
+        child: Row(
+          children: [
+            Icon(icone, color: Colors.white, size: 22),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(titulo,
+                      style: const TextStyle(
+                          color: Colors.white, fontSize: 13, fontWeight: FontWeight.w700)),
+                  Text(subtitulo,
+                      style: const TextStyle(color: Colors.white38, fontSize: 12)),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right, color: Colors.white38, size: 18),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // Card informativo (sem clique)
+  Widget _cardInfo(IconData icone, String titulo, String subtitulo) {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(

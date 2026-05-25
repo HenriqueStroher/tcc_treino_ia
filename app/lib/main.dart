@@ -38,6 +38,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  final GlobalKey<ListaExerciciosScreenState> _listaKey = GlobalKey<ListaExerciciosScreenState>();
 
   static const _bgAppBar = Color(0xFF0A0A0A);
 
@@ -51,6 +52,13 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
   void dispose() {
     _tabController.dispose();
     super.dispose();
+  }
+
+  void _navegarParaGrupo(String grupo) {
+    _tabController.animateTo(1);
+    Future.delayed(const Duration(milliseconds: 300), () {
+      _listaKey.currentState?.mudarGrupo(grupo);
+    });
   }
 
   @override
@@ -111,9 +119,9 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
       ),
       body: TabBarView(
         controller: _tabController,
-        children: const [
-          HomeScreen(),
-          ListaExerciciosScreen(),
+        children: [
+          HomeScreen(onNavegar: _navegarParaGrupo),
+          ListaExerciciosScreen(key: _listaKey),
         ],
       ),
     );
