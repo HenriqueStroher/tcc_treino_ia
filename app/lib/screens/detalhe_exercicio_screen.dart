@@ -16,6 +16,9 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
   late AnimationController _animController;
   int _frameAtual = 0;
 
+  static const _bgPrimary = Color(0xFF111111);
+  static const _bgCard    = Color(0xFF1C1C1C);
+
   @override
   void initState() {
     super.initState();
@@ -54,35 +57,35 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
     final ex = widget.exercicio;
 
     return Scaffold(
-      backgroundColor: const Color(0xFF1A1A2E),
+      backgroundColor: _bgPrimary,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF16213E),
+        backgroundColor: const Color(0xFF0A0A0A),
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text(ex.nome,
-            style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+        title: Text(
+          ex.nome,
+          style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Animação dos frames
-            Center(
-              child: Container(
-                width: double.infinity,
-                height: 220,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Image.asset(
-                    _frameLocalPath(_frameAtual),
-                    fit: BoxFit.contain,
-                    errorBuilder: (_, __, ___) => const Center(
-                      child: Icon(Icons.fitness_center, color: Colors.white54, size: 60),
-                    ),
+            // Imagem
+            Container(
+              width: double.infinity,
+              height: 220,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.asset(
+                  _frameLocalPath(_frameAtual),
+                  fit: BoxFit.contain,
+                  errorBuilder: (_, __, ___) => const Center(
+                    child: Icon(Icons.fitness_center, color: Colors.black38, size: 60),
                   ),
                 ),
               ),
@@ -92,8 +95,7 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
             _secao('Sobre o exercício', ex.descricao),
             const SizedBox(height: 16),
 
-            _chip('Músculo alvo', ex.musculoPrimario == 'BICEPS' ? 'Bíceps' : 'Tríceps',
-                Colors.deepPurple),
+            _chip('Músculo alvo', ex.musculoPrimario == 'BICEPS' ? 'Bíceps' : 'Tríceps'),
             const SizedBox(height: 16),
 
             _secaoListaCapitalizada('Equipamento', ex.equipamento),
@@ -102,7 +104,7 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
             _secaoLista('Como executar', ex.steps),
             const SizedBox(height: 16),
 
-            _secaoListaIcone('⚠️ Cuidados', ex.cuidados, Colors.orange),
+            _secaoListaIcone('Cuidados', ex.cuidados),
             const SizedBox(height: 24),
 
             SizedBox(
@@ -117,14 +119,15 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepPurple,
-                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black,
                   padding: const EdgeInsets.symmetric(vertical: 14),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  elevation: 0,
                 ),
                 child: const Text(
                   'Sugerir Variação',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                 ),
               ),
             ),
@@ -141,12 +144,12 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
         Text(titulo,
             style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
         const SizedBox(height: 6),
-        Text(conteudo, style: const TextStyle(color: Colors.white70, height: 1.5)),
+        Text(conteudo, style: const TextStyle(color: Colors.white60, height: 1.5)),
       ],
     );
   }
 
-  Widget _chip(String label, String valor, Color cor) {
+  Widget _chip(String label, String valor) {
     return Row(
       children: [
         Text(label,
@@ -154,8 +157,18 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
         const SizedBox(width: 10),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-          decoration: BoxDecoration(color: cor, borderRadius: BorderRadius.circular(20)),
-          child: Text(valor, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Text(
+            valor,
+            style: const TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 13,
+            ),
+          ),
         ),
       ],
     );
@@ -173,11 +186,11 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('• ', style: TextStyle(color: Colors.deepPurple, fontSize: 16)),
+                  const Text('• ', style: TextStyle(color: Colors.white54, fontSize: 16)),
                   Expanded(
                     child: Text(
                       _capitalizar(item),
-                      style: const TextStyle(color: Colors.white70, height: 1.4),
+                      style: const TextStyle(color: Colors.white60, height: 1.4),
                     ),
                   ),
                 ],
@@ -199,8 +212,10 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('• ', style: TextStyle(color: Colors.deepPurple, fontSize: 16)),
-                  Expanded(child: Text(item, style: const TextStyle(color: Colors.white70, height: 1.4))),
+                  const Text('• ', style: TextStyle(color: Colors.white54, fontSize: 16)),
+                  Expanded(
+                      child: Text(item,
+                          style: const TextStyle(color: Colors.white60, height: 1.4))),
                 ],
               ),
             )),
@@ -208,21 +223,30 @@ class _DetalheExercicioScreenState extends State<DetalheExercicioScreen>
     );
   }
 
-  Widget _secaoListaIcone(String titulo, List<String> itens, Color cor) {
+  Widget _secaoListaIcone(String titulo, List<String> itens) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(titulo,
-            style: TextStyle(color: cor, fontWeight: FontWeight.bold, fontSize: 16)),
+        Row(
+          children: [
+            const Icon(Icons.warning_amber_rounded, color: Colors.white60, size: 18),
+            const SizedBox(width: 6),
+            Text(titulo,
+                style: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
+          ],
+        ),
         const SizedBox(height: 8),
         ...itens.map((item) => Padding(
               padding: const EdgeInsets.only(bottom: 6),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Icon(Icons.warning_amber_rounded, color: cor, size: 18),
+                  const Icon(Icons.warning_amber_rounded, color: Colors.white38, size: 16),
                   const SizedBox(width: 6),
-                  Expanded(child: Text(item, style: const TextStyle(color: Colors.white70, height: 1.4))),
+                  Expanded(
+                      child: Text(item,
+                          style: const TextStyle(color: Colors.white60, height: 1.4))),
                 ],
               ),
             )),

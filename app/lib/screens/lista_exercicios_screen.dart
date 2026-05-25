@@ -21,12 +21,9 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
   String _grupoSelecionado = 'BICEPS';
   bool _carregando = true;
 
-  // Cores do app
-  static const _bgPrimary   = Color(0xFF1A1A2E);
-  static const _bgSecondary = Color(0xFF16213E);
-  static const _bgCard      = Color(0xFF1E2A45);
-  static const _accent      = Color(0xFF7C3AED);
-  static const _accentLight = Color(0xFF9F67FF);
+  static const _bgPrimary  = Color(0xFF111111);
+  static const _bgCard     = Color(0xFF1C1C1C);
+  static const _bgCardAlt  = Color(0xFF222222);
 
   @override
   void initState() {
@@ -74,7 +71,6 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: _bgPrimary,
-      appBar: _buildAppBar(),
       body: Column(
         children: [
           _buildFiltroGrupo(),
@@ -85,53 +81,10 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
     );
   }
 
-  PreferredSizeWidget _buildAppBar() {
-    return AppBar(
-      backgroundColor: _bgSecondary,
-      elevation: 0,
-      titleSpacing: 16,
-      title: Row(
-        children: [
-          Container(
-            width: 32,
-            height: 32,
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [_accent, _accentLight],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Image.asset(
-              'assets/images/logo.png',
-              height: 20,
-              errorBuilder: (_, __, ___) => const Icon(
-                Icons.fitness_center,
-                color: Colors.white,
-                size: 18,
-              ),
-            ),
-          ),
-          const SizedBox(width: 10),
-          const Text(
-            'AppGym',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w800,
-              fontSize: 20,
-              letterSpacing: 0.5,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget _buildFiltroGrupo() {
     return Container(
-      color: _bgSecondary,
-      padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
+      color: const Color(0xFF0A0A0A),
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
       child: Row(
         children: [
           _botaoGrupo('BICEPS', 'Bíceps'),
@@ -151,30 +104,14 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(vertical: 10),
           decoration: BoxDecoration(
-            gradient: selecionado
-                ? const LinearGradient(
-                    colors: [_accent, _accentLight],
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                  )
-                : null,
-            color: selecionado ? null : const Color(0xFF0F3460),
+            color: selecionado ? Colors.white : const Color(0xFF2A2A2A),
             borderRadius: BorderRadius.circular(12),
-            boxShadow: selecionado
-                ? [
-                    BoxShadow(
-                      color: _accent.withOpacity(0.4),
-                      blurRadius: 8,
-                      offset: const Offset(0, 3),
-                    )
-                  ]
-                : null,
           ),
           child: Text(
             label,
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: selecionado ? Colors.white : Colors.white54,
+              color: selecionado ? Colors.black : Colors.white54,
               fontWeight: selecionado ? FontWeight.w700 : FontWeight.w500,
               fontSize: 14,
             ),
@@ -204,7 +141,7 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(14),
-            borderSide: const BorderSide(color: _accent, width: 1.5),
+            borderSide: const BorderSide(color: Colors.white24, width: 1.5),
           ),
         ),
       ),
@@ -214,7 +151,7 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
   Widget _buildLista() {
     if (_carregando) {
       return const Center(
-        child: CircularProgressIndicator(color: _accent),
+        child: CircularProgressIndicator(color: Colors.white54),
       );
     }
 
@@ -223,7 +160,7 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.search_off, color: Colors.white24, size: 48),
+            const Icon(Icons.search_off, color: Colors.white24, size: 48),
             const SizedBox(height: 12),
             const Text(
               'Nenhum exercício encontrado',
@@ -238,12 +175,12 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
       itemCount: _exerciciosFiltrados.length,
       itemBuilder: (context, index) {
-        return _cardExercicio(_exerciciosFiltrados[index], index);
+        return _cardExercicio(_exerciciosFiltrados[index]);
       },
     );
   }
 
-  Widget _cardExercicio(Exercicio ex, int index) {
+  Widget _cardExercicio(Exercicio ex) {
     final imagePath = 'assets/images/${ex.slug}-1.png';
 
     return GestureDetector(
@@ -255,8 +192,8 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
         margin: const EdgeInsets.only(bottom: 10),
         decoration: BoxDecoration(
           color: _bgCard,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: Colors.white.withOpacity(0.05)),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: Colors.white.withOpacity(0.06)),
         ),
         child: Padding(
           padding: const EdgeInsets.all(12),
@@ -267,30 +204,28 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
                 width: 64,
                 height: 64,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFFFFFF),
-                  borderRadius: BorderRadius.circular(12),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 clipBehavior: Clip.antiAlias,
                 child: Image.asset(
                   imagePath,
-                  width: 64,
-                  height: 64,
                   fit: BoxFit.contain,
                   errorBuilder: (_, __, ___) => const Icon(
                     Icons.fitness_center,
-                    color: Colors.white24,
+                    color: Colors.black54,
                     size: 28,
                   ),
                 ),
               ),
               const SizedBox(width: 14),
-              // Texto
+              // Nome
               Expanded(
                 child: Text(
                   ex.nome,
                   style: const TextStyle(
                     color: Colors.white,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w600,
                     fontSize: 15,
                     height: 1.3,
                   ),
@@ -301,7 +236,7 @@ class _ListaExerciciosScreenState extends State<ListaExerciciosScreen>
                 width: 32,
                 height: 32,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.06),
+                  color: Colors.white.withOpacity(0.08),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Icon(Icons.chevron_right, color: Colors.white38, size: 20),

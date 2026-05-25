@@ -20,11 +20,8 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
   List<MapEntry<Exercicio, double>> _sugestoes = [];
   bool _carregando = true;
 
-  static const _bgPrimary   = Color(0xFF1A1A2E);
-  static const _bgSecondary = Color(0xFF16213E);
-  static const _bgCard      = Color(0xFF1E2A45);
-  static const _accent      = Color(0xFF7C3AED);
-  static const _accentLight = Color(0xFF9F67FF);
+  static const _bgPrimary = Color(0xFF111111);
+  static const _bgCard    = Color(0xFF1C1C1C);
 
   @override
   void initState() {
@@ -50,7 +47,7 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
   Color _corScore(double score) {
     if (score >= 0.90) return const Color(0xFF4ADE80); // verde
     if (score >= 0.75) return const Color(0xFFFBBF24); // amarelo
-    return const Color(0xFF94A3B8); // cinza
+    return const Color(0xFFEF4444); // vermelho
   }
 
   String _labelScore(double score) {
@@ -64,7 +61,7 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
     return Scaffold(
       backgroundColor: _bgPrimary,
       appBar: AppBar(
-        backgroundColor: _bgSecondary,
+        backgroundColor: const Color(0xFF0A0A0A),
         iconTheme: const IconThemeData(color: Colors.white),
         title: const Text(
           'Sugestões de Variação',
@@ -72,7 +69,7 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
         ),
       ),
       body: _carregando
-          ? const Center(child: CircularProgressIndicator(color: _accent))
+          ? const Center(child: CircularProgressIndicator(color: Colors.white54))
           : Column(
               children: [
                 _cardOrigem(),
@@ -92,11 +89,10 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
       decoration: BoxDecoration(
         color: _bgCard,
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: _accent.withOpacity(0.5), width: 1.5),
+        border: Border.all(color: Colors.white24, width: 1.5),
       ),
       child: Row(
         children: [
-          // Imagem do exercício origem
           Container(
             width: 52,
             height: 52,
@@ -108,11 +104,8 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
             child: Image.asset(
               imagePath,
               fit: BoxFit.contain,
-              errorBuilder: (_, __, ___) => const Icon(
-                Icons.fitness_center,
-                color: _accent,
-                size: 28,
-              ),
+              errorBuilder: (_, __, ___) =>
+                  const Icon(Icons.fitness_center, color: Colors.black54, size: 28),
             ),
           ),
           const SizedBox(width: 12),
@@ -120,23 +113,15 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Base de comparação',
-                  style: TextStyle(
-                    color: _accentLight.withOpacity(0.8),
-                    fontSize: 11,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.5,
-                  ),
+                  style: TextStyle(color: Colors.white38, fontSize: 11, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(height: 2),
                 Text(
                   ex.nome,
                   style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 14,
-                  ),
+                      color: Colors.white, fontWeight: FontWeight.w700, fontSize: 14),
                 ),
               ],
             ),
@@ -144,16 +129,12 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
-              color: _accent.withOpacity(0.2),
+              color: Colors.white.withOpacity(0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Text(
               ex.musculoPrimario == 'BICEPS' ? 'Bíceps' : 'Tríceps',
-              style: const TextStyle(
-                color: _accentLight,
-                fontSize: 11,
-                fontWeight: FontWeight.w600,
-              ),
+              style: const TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600),
             ),
           ),
         ],
@@ -184,12 +165,12 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
       itemCount: _sugestoes.length,
       itemBuilder: (context, index) {
         final entry = _sugestoes[index];
-        return _cardSugestao(entry.key, entry.value, index);
+        return _cardSugestao(entry.key, entry.value);
       },
     );
   }
 
-  Widget _cardSugestao(Exercicio ex, double score, int index) {
+  Widget _cardSugestao(Exercicio ex, double score) {
     final imagePath = 'assets/images/${ex.slug}-1.png';
     final cor = _corScore(score);
     final label = _labelScore(score);
@@ -204,7 +185,7 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
         decoration: BoxDecoration(
           color: _bgCard,
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: Colors.white.withOpacity(0.05)),
+          border: Border.all(color: Colors.white.withOpacity(0.06)),
         ),
         child: Padding(
           padding: const EdgeInsets.all(12),
@@ -224,7 +205,7 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
                   fit: BoxFit.contain,
                   errorBuilder: (_, __, ___) => const Icon(
                     Icons.fitness_center,
-                    color: Colors.white24,
+                    color: Colors.black54,
                     size: 28,
                   ),
                 ),
@@ -245,32 +226,25 @@ class _SugestoesScreenState extends State<SugestoesScreen> {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    // Label de compatibilidade
                     Text(
                       label,
-                      style: TextStyle(
-                        color: cor,
-                        fontSize: 11,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: TextStyle(color: cor, fontSize: 11, fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(height: 4),
-                    // Barra de progresso
                     ClipRRect(
                       borderRadius: BorderRadius.circular(4),
                       child: LinearProgressIndicator(
                         value: score,
                         backgroundColor: Colors.white.withOpacity(0.08),
                         valueColor: AlwaysStoppedAnimation<Color>(cor),
-                        minHeight: 5,
+                        minHeight: 4,
                       ),
                     ),
                   ],
                 ),
               ),
               const SizedBox(width: 10),
-              // Seta
-              Icon(Icons.chevron_right, color: Colors.white24, size: 20),
+              const Icon(Icons.chevron_right, color: Colors.white24, size: 20),
             ],
           ),
         ),
