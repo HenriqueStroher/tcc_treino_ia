@@ -12,3 +12,5 @@ Como rodar o projeto
 1. Tenha o SDK do Flutter instalado.
 2. Navegue até a pasta do app: `cd app`
 3. Execute o comando: `flutter run`
+
+Link para acessar - https://appgym-7f699.web.app/
