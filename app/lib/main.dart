@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AppGym',
+      title: 'FitWise',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
@@ -93,7 +93,7 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
             ),
             const SizedBox(width: 10),
             const Text(
-              'AppGym',
+              'FitWise',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w800,

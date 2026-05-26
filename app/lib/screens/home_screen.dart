@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'AppGym',
+                  'FitWise',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 26,
@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
         ),
         const SizedBox(height: 24),
         const Text(
-          'Bem-vindo ao AppGym!',
+          'Bem-vindo ao FitWise!',
           style: TextStyle(
             color: Colors.white,
             fontSize: 22,
@@ -120,7 +120,7 @@ class HomeScreen extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           _passo('1', 'Filtre por grupo muscular',
-              'Use as abas Bíceps e Tríceps para ver os exercícios de cada grupo.'),
+              'Use as abas da seção "Exercícios" para ver os exercícios de cada grupo.'),
           _passo('2', 'Busque um exercício',
               'Digite o nome na barra de busca para encontrar rapidamente o que procura.'),
           _passo('3', 'Explore os detalhes',
